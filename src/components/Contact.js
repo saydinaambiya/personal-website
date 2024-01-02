@@ -7,11 +7,13 @@ import {
   HStack,
   Heading,
   Center,
+  Tooltip,
 } from "@chakra-ui/react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import ProfileArray from "./ProfileArray";
 
 export default function Contact({ color }) {
+  
   const profile = ProfileArray();
   const linkedin = () => {
     window.open(`${profile.linkedin}`, "_blank", "noreferrer,noopener");
@@ -50,9 +52,33 @@ export default function Contact({ color }) {
             </Text>
             <Center>
               <HStack pt={4} spacing={4}>
-                <FaLinkedin onClick={linkedin} size={28} />
-                <FaGithub onClick={github} size={28} />
-                <FaEnvelope onClick={email} size={28} />
+                <Tooltip
+                  label="LinkedIn"
+                  placement="bottom"
+                  borderRadius={4}
+                >
+                  <div>
+                    <FaLinkedin onClick={linkedin} size={28} />
+                  </div>
+                </Tooltip>
+                <Tooltip
+                  label="Github"
+                  placement="bottom"
+                  borderRadius={4}
+                >
+                  <div>
+                    <FaGithub onClick={github} size={28} />
+                  </div>
+                </Tooltip>
+                <Tooltip
+                  label="Email"
+                  placement="bottom"
+                  borderRadius={4}
+                >
+                  <div>
+                    <FaEnvelope onClick={email} size={28} />
+                  </div>
+                </Tooltip>
               </HStack>
             </Center>
           </Stack>
