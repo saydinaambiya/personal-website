@@ -18,7 +18,7 @@ export default function Footer() {
         py={4}
         align="center"
       >
-        <Text>© 2023 Saydina Ambiya. All rights reserved</Text>
+        <Text>© 2024 | Crafted with ❤️ by Saydina Ambiya</Text>
       </Container>
     </Box>
   );
