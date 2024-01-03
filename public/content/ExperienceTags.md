@@ -1,3 +1,3 @@
+All
 Web
 Mobile
-All
